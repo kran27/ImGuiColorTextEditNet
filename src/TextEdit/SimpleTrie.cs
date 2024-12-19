@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ImGuiColorTextEditNet;
 
-class SimpleTrie<TInfo> where TInfo : class
+public class SimpleTrie<TInfo> where TInfo : class
 {
     class Node
     {

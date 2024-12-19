@@ -109,7 +109,7 @@ public class TextEditorRenderer
         if (!IsImGuiChildIgnored)
         {
             ImGui.BeginChild(title, size, 
-                ImGuiChildFlags.None,
+                false,
                 ImGuiWindowFlags.HorizontalScrollbar
                 | ImGuiWindowFlags.AlwaysHorizontalScrollbar
                 | ImGuiWindowFlags.NoMove);
@@ -433,8 +433,9 @@ public class TextEditorRenderer
                 i += chunk.Length;
             }
 
-            drawList.AddText(offset, color, temp);
-            return ImGui.CalcTextSize(temp);
+            var tempstr = new string(temp);
+            drawList.AddText(offset, color, tempstr);
+            return ImGui.CalcTextSize(tempstr);
         }
         finally
         {

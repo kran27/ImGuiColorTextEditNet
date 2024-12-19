@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -15,7 +15,7 @@
     <Version>0.1.7</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ImGui.NET" Version="1.90.5.1" />
+    <PackageReference Include="ImGui.NET" Version="1.89.2" />
   </ItemGroup>
 
   <ItemGroup>
