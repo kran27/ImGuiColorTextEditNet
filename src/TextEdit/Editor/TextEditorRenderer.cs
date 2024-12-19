@@ -16,7 +16,7 @@ public class TextEditorRenderer
     static readonly uint MagentaUInt = 0xff00ffff;
 
     // Note: if fonts / sizes can ever be changed the char width cache will need to be invalidated.
-    readonly SimpleCache<char, float> _charWidthCache = new("char widths", x => ImGui.CalcTextSize(x.ToString()).X);
+    readonly SimpleCache<char, float> _charWidthCache = new("char widths", x => ImGui.CalcTextSize(x.ToString()).X - 0.93f);
     readonly SimpleCache<int, string> _lineNumberCache = new("line numbers", x => $"{x} ");
     readonly TextEditorSelection _selection;
     readonly TextEditorText _text;
@@ -314,7 +314,7 @@ public class TextEditorRenderer
                                 }
                                 else
                                 {
-                                    width = _charWidthCache.Get(line[cindex].Char);
+                                    width = _charWidthCache.Get(c);
                                 }
                             }
 
